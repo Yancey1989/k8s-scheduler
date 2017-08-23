@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    component: scheduler
+    tier: control-plane
+  name: yancey-scheduler
+  namespace: paddlecloud
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        component: scheduler
+        tier: control-plane
+        version: second
+    spec:
+      containers:
+      - image: bootstrapper:5000/yancey1989/yancey-scheduler
+        name: kube-second-scheduler
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: '0.1'
+            memory: 1Gi
+          limits:
+            cpu: '0.1'
+            memory: 1Gi
+
+
