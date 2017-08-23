@@ -11,3 +11,4 @@ A implement of Kubernetes Scheduler written by Go,just assign pod to node random
         ./test/ca.pem
     ```
 - Execute `go run main.go`
+- Create a pod with `schedulerName: my-scheduler`, execute `kubectl create -f nginx.yaml`
