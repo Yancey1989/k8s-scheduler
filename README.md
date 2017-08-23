@@ -6,8 +6,8 @@ A implement of Kubernetes Scheduler written by Go,just assign pod to node random
 - Add user key files under `./test` folder, like 
     ```bash
         ./test/
-        ./test//admin-key.pem
-        ./test//admin.pem
-        ./test//ca.pem
+        ./test/admin-key.pem
+        ./test/admin.pem
+        ./test/ca.pem
     ```
 - Execute `go run main.go`
